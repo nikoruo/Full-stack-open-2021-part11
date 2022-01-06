@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eslint": "eslint './**/*.{js,jsx}'",
     "cypress:open": "cypress open",
-    "test:e2e": "cypress run"
+    "test:e2e": "cypress run",
+	"jest": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "cypress": "^9.2.0",
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+	"jest": "^25.5.4"
   }
 }
