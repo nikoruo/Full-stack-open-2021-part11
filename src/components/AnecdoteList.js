@@ -5,14 +5,14 @@ import { setNotification } from '../reducers/notificationReducer'
 
 const AnecdoteList = () => {
 
-  //haetaan storesta ne anekdootit, jotka halutaan näyttää (otetaan siis filtteri huomioon)
+  //haetaan storesta ne anekdootit, jotka halutaan nï¿½yttï¿½ï¿½ (otetaan siis filtteri huomioon)
   const anecdotes = useSelector(({ filter, anecdotes }) => {
     return anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(filter.toLowerCase()))
   })
 
   const dispatch = useDispatch()
 
-  //äänen antaminen anekdootille
+  //ï¿½ï¿½nen antaminen anekdootille
   const vote = (anecdote) => {
     dispatch(voteAnecdote(anecdote))
     dispatch(setNotification(`You voted "${anecdote.content}"`, 5))
@@ -28,7 +28,7 @@ const AnecdoteList = () => {
             </div>
             <div>
             has {anecdote.votes}
-              <button onClick={() => vote(anecdote)}>vote</button>
+              <button id={anecdote.content} onClick={() => vote(anecdote)}>vote</button>
             </div>
           </div>
         )

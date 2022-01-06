@@ -4,7 +4,7 @@ import { setFilter } from '../reducers/filterReducer'
 
 const Filter = (props) => {
 
-  //filtterin päivitys
+  //filtterin pï¿½ivitys
   const handleChange = (event) => {
     props.setFilter(event.target.value)
   }
@@ -14,7 +14,7 @@ const Filter = (props) => {
 
   return (
     <div style={style}>
-      filter <input onChange={handleChange} />
+      filter <input id="filter" onChange={handleChange} />
     </div>
   )
 }
